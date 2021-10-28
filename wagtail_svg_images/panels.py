@@ -1,7 +1,6 @@
 from django.forms import CheckboxInput
 from instance_selector.edit_handlers import InstanceSelectorPanel
-from wagtail.admin import edit_handlers
-from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, ObjectList
+from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 
 

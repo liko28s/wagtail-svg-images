@@ -1,17 +1,11 @@
-from django.core.validators import MaxLengthValidator, MinLengthValidator
 from django.forms.utils import ErrorList
 from django.utils.translation import gettext_lazy as _
 from instance_selector.blocks import InstanceSelectorBlock
 from wagtail.core.blocks import (
     BooleanBlock,
-    CharBlock,
-    ListBlock,
-    RichTextBlock,
-    StreamBlock,
-    StructBlock, PageChooserBlock,
+    StructBlock,
 )
 from wagtail.core.blocks.struct_block import StructBlockValidationError
-from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
 
 

@@ -1,6 +1,6 @@
 """Custom Database Fields."""
 
-from django.db.models import BooleanField, CharField, ForeignKey, JSONField
+from django.db.models import BooleanField, ForeignKey
 from django.utils.translation import gettext_lazy as _
 
 class ImageOrSvgField(ForeignKey):

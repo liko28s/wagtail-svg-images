@@ -1,14 +1,10 @@
-from django.urls import reverse
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
 from instance_selector.registry import registry
 from instance_selector.selectors import ModelAdminInstanceSelector
-from wagtail.admin.views import collections
 from wagtail.contrib.modeladmin.options import ModelAdmin, modeladmin_register
-from wagtail.core.models import Collection
-from wagtail.images.models import Image
 
-from .models import Color, SVGImage
+from .models import SVGImage
 
 
 @modeladmin_register

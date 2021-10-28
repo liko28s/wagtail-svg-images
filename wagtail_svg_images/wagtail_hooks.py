@@ -1,9 +1,5 @@
-import wagtail.admin.rich_text.editors.draftail.features as draftail_features
 from django.templatetags.static import static
 from django.utils.html import format_html
-from wagtail.admin.rich_text.converters.html_to_contentstate import (
-    InlineStyleElementHandler,
-)
 from wagtail.core import hooks
 
 
