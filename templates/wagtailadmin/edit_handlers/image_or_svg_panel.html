@@ -1,0 +1,22 @@
+<legend>{{ self.verbose_name }}</legend>
+<ul class="fields">
+  <li>
+    <div class="field">
+      <label for="{{ self.children.0.id_for_label }}">{{ self.verbose_name }}</label>
+      <div class="field-content">
+        <div class="field-content">
+          <ul class="fields">
+          {% for child in self.children %}
+              <li class="{{ child.classes|join:" " }}">
+                {% if forloop.first %}
+                  <label for="{{ child.id_for_label }}">{{ child.heading }}</label>
+                {% endif %}
+                {{ child.bound_field}}
+              </li>
+          {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
