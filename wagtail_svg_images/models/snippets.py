@@ -7,10 +7,8 @@ from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.core.models import Collection, get_root_collection_id
 from wagtail.documents import get_document_model_string
 from wagtail.documents.edit_handlers import DocumentChooserPanel
-from wagtail.snippets.models import register_snippet
 
 
-@register_snippet
 class SVGImage(models.Model):
     """Snippet that provides SVG Image Support."""
 

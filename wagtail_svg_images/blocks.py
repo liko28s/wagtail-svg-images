@@ -41,7 +41,7 @@ class ImageOrSVGBlock(StructBlock):
                 (
                     f"{field}_svg",
                     InstanceSelectorBlock(
-                        target_model="commons.SVGImage",
+                        target_model="wagtail_svg_images.SVGImage",
                         **self.child_kwargs,
                         classname=f"ag-choice-handler-target--{field}_is_svg ag-choice-handler-hidden-if--false",
                     ),

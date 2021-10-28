@@ -33,7 +33,7 @@ class ImageOrSvgField(ForeignKey):
         svg_field_name = f"{self.name}_svg"
         self.init_kwargs.pop("related_name")
         svg_field = ForeignKey(
-            "commons.SVGImage",
+            "wagtail_svg_images.SVGImage",
             related_name="+",
             **self.init_kwargs,
         )
