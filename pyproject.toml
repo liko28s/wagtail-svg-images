@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "wagtail-svg-images"
-version = "0.1.0"
+version = "0.1.2"
 description = "Workaround to support SVG as Images in Wagtail"
 authors = ["Ramiro A Alvarez U <liko28s@gmail.com>"]
 license = "MIT"
+packages = [
+    { include = "wagtail_svg_images" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"

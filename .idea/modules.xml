@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/wagtail-svg-support.iml" filepath="$PROJECT_DIR$/.idea/wagtail-svg-support.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/wagtail-svg-images.iml" filepath="$PROJECT_DIR$/.idea/wagtail-svg-images.iml" />
     </modules>
   </component>
 </project>
