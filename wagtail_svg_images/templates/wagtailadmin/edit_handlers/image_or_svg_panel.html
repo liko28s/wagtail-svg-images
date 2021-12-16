@@ -1,3 +1,4 @@
+{% load wagtailadmin_tags i18n %}
 <legend>{{ self.verbose_name }}</legend>
 <ul class="fields">
   <li>
@@ -6,14 +7,23 @@
       <div class="field-content">
         <div class="field-content">
           <ul class="fields">
-          {% for child in self.children %}
+            {% for child in self.children %}
               <li class="{{ child.classes|join:" " }}">
                 {% if forloop.first %}
                   <label for="{{ child.id_for_label }}">{{ child.heading }}</label>
                 {% endif %}
                 {{ child.bound_field}}
               </li>
-          {% endfor %}
+            {% endfor %}
+            {% for child in self.children %}
+              {% if child.bound_field|has_unrendered_errors %}
+                <p class="error-message">
+                  {% for error in child.bound_field.errors %}
+                    <span>{{ error|escape }}</span>
+                  {% endfor %}
+                </p>
+              {% endif %}
+            {% endfor %}
           </ul>
         </div>
       </div>

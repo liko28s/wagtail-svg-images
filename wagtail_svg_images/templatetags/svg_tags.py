@@ -15,7 +15,7 @@ register = template.Library()
 allowed_filter_pattern = re.compile(r"^[A-Za-z0-9_\-\.]+$")
 
 # TODO add more properties if you need
-available_fields = ["url", "alt", "height", "width"]
+available_fields = ["url", "alt", "height", "width", "fill", "max", "original"]
 FakeRendition = namedtuple(
     "FakeRendition",
     available_fields,
