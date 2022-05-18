@@ -15,6 +15,3 @@ from wagtail.core import hooks
 def editor_js():
     return format_html('<script src="{}"></script>', static("js/svg_handler.js"))
 
-@hooks.register("insert_editor_css")
-def editor_js():
-    return format_html('<link rel="stylesheet" href="{}"></link>', static("sass/wagtail.css"))
