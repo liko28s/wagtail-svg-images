@@ -1,7 +1,7 @@
 from django.forms import CheckboxInput
-from instance_selector.edit_handlers import InstanceSelectorPanel
 from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtailsvg.edit_handlers import SvgChooserPanel
 
 
 class ImageOrSVGPanel(MultiFieldPanel):
@@ -21,7 +21,7 @@ class ImageOrSVGPanel(MultiFieldPanel):
                 field,
                 classname=f"ag-choice-handler-target--{field}_is_svg ag-choice-handler-hidden-if--true",
             ),
-            InstanceSelectorPanel(
+            SvgChooserPanel(
                 f"{field}_svg",
                 classname=f"ag-choice-handler-target--{field}_is_svg ag-choice-handler-hidden-if--false",
             ),

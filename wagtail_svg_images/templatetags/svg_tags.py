@@ -92,7 +92,7 @@ class CustomImageNode(ImageNode):
                 from xml.dom import minidom
 
                 svg_content = resolved_image.file.file.file
-                #svg_parsed = minidom.parse(resolved_image.file.file.file)
+                # svg_parsed = minidom.parse(resolved_image.file.file.file)
                 svg_parsed = minidom.parse(svg_content)
                 svg_content.seek(0)
                 for key in self.attrs:

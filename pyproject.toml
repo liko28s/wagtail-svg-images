@@ -10,8 +10,8 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-wagtail-instance-selector = "^2.1.1"
-wagtail = "^2.14.2"
+wagtail = "^3.0"
+wagtailsvg = "^0.0.33"
 
 [tool.poetry.dev-dependencies]
 

@@ -2,6 +2,8 @@
 
 from django.db.models import BooleanField, ForeignKey
 from django.utils.translation import gettext_lazy as _
+from wagtailsvg.models import Svg
+
 
 class ImageOrSvgField(ForeignKey):
     """Add an image_field, image_field_svg and image_field_is_svg fields, combine with ImageOrSvgPanel."""
@@ -33,7 +35,7 @@ class ImageOrSvgField(ForeignKey):
         svg_field_name = f"{self.name}_svg"
         self.init_kwargs.pop("related_name")
         svg_field = ForeignKey(
-            "wagtail_svg_images.SVGImage",
+            Svg,
             related_name="+",
             **self.init_kwargs,
         )

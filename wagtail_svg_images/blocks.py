@@ -1,12 +1,12 @@
 from django.forms.utils import ErrorList
 from django.utils.translation import gettext_lazy as _
-from instance_selector.blocks import InstanceSelectorBlock
+from wagtail.blocks.struct_block import StructBlockValidationError
 from wagtail.core.blocks import (
     BooleanBlock,
     StructBlock,
 )
-from wagtail.core.blocks.struct_block import StructBlockValidationError
 from wagtail.images.blocks import ImageChooserBlock
+from wagtailsvg.blocks import SvgChooserBlock
 
 
 class ImageOrSVGBlock(StructBlock):
@@ -40,8 +40,7 @@ class ImageOrSVGBlock(StructBlock):
                 ),
                 (
                     f"{field}_svg",
-                    InstanceSelectorBlock(
-                        target_model="wagtail_svg_images.SVGImage",
+                    SvgChooserBlock(
                         **self.child_kwargs,
                         classname=f"ag-choice-handler-target--{field}_is_svg ag-choice-handler-hidden-if--false",
                     ),
