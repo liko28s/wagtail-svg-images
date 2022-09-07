@@ -59,7 +59,10 @@ class CustomImageNode(ImageNode):
             add_image_expr_suffix(self.image_expr, "_is_svg")
             values = {key: value for key, value in resolved.items()}
             alt_context.update(values)
-            ContextDict(alt_context, {self.image_expr.var.lookups[0]: values})
+            ContextDict(
+                alt_context,
+                {self.image_expr.var.lookups[0]: {**values, "value": values}},
+            )
             is_svg = self.image_expr.resolve(alt_context)
             remove_image_expr_suffix(self.image_expr, "_is_svg")
             add_image_expr_suffix(self.image_expr, "_svg")

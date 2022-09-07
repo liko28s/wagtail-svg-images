@@ -17,7 +17,7 @@ class ImageOrSVGPanel(MultiFieldPanel):
                 classname=f"ag-choice-handler ag-choice-handler--{field}_is_svg",
                 widget=CheckboxInput,
             ),
-            ImageChooserPanel(
+            FieldPanel(
                 field,
                 classname=f"ag-choice-handler-target--{field}_is_svg ag-choice-handler-hidden-if--true",
             ),
